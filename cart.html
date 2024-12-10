@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Cart</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+  <header class="custom-header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <img src="images/leaugeLogo-removebg-preview.png" height="76" width="150" class="breathing-icon" />
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-around">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"><h1>Inicio</h1></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page2.html"><h1>Campeones</h1></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page3.html"><h1>Items</h1></a>
+            </li>
+            <li>
+              <a class="nav-link" href="cart.html"><h1>Carrito</h1></a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+    <main>
+      <div class="container shop-container">
+        <h1 class="section-title">Champion Shop</h1>
+        
+        <div class="row">
+            <!-- Champions Grid -->
+            <div class="col-lg-8">
+                <div class="row">
+                    <!-- Varus -->
+                    <div class="col-md-6 mb-4">
+                        <div class="champion-card">
+                            <div class="champion-image-container">
+                                <img src="images/Varus_Render.webp" class="champion-image" alt="Varus">
+                            </div>
+                            <div class="champion-info">
+                                <h3 class="champion-name">Varus</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="champion-price">
+                                        <img src="images/rp-icon.png" class="rp-icon" alt="RP">
+                                        3600 RP
+                                    </div>
+                                    <button class="wishlist-btn" onclick="addToCart('Varus', 3600)">
+                                        Add to Wishlist ❤️
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Swain -->
+                    <div class="col-md-6 mb-4">
+                        <div class="champion-card">
+                            <div class="champion-image-container">
+                                <img src="images/Swain_Render.webp" class="champion-image" alt="Swain">
+                            </div>
+                            <div class="champion-info">
+                                <h3 class="champion-name">Swain</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="champion-price">
+                                        <img src="images/rp-icon.png" class="rp-icon" alt="RP">
+                                        1800 RP
+                                    </div>
+                                    <button class="wishlist-btn" onclick="addToCart('Swain', 1800)">
+                                        Add to Wishlist ❤️
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Lee Sin -->
+                    <div class="col-md-6 mb-4">
+                        <div class="champion-card">
+                            <div class="champion-image-container">
+                                <img src="images/lee sin 2.webp" class="champion-image" alt="Lee Sin">
+                            </div>
+                            <div class="champion-info">
+                                <h3 class="champion-name">Lee Sin</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="champion-price">
+                                        <img src="images/rp-icon.png" class="rp-icon" alt="RP">
+                                        1200 RP
+                                    </div>
+                                    <button class="wishlist-btn" onclick="addToCart('Lee Sin', 1200)">
+                                        Add to Wishlist ❤️
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <!-- Sivir -->
+                    <div class="col-md-6 mb-4">
+                        <div class="champion-card">
+                            <div class="champion-image-container">
+                                <img src="images/sivir 2.webp" class="champion-image" alt="Sivir">
+                            </div>
+                            <div class="champion-info">
+                                <h3 class="champion-name">Sivir</h3>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="champion-price">
+                                        <img src="images/rp-icon.png" class="rp-icon" alt="RP">
+                                        450 RP
+                                    </div>
+                                    <button class="wishlist-btn" onclick="addToCart('Sivir', 450)">
+                                        Add to Wishlist ❤️
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="col-lg-4">
+                <div class="cart-summary">
+                    <h2 class="summary-title">Cart Summary</h2>
+                    <div id="cart-items" class="cart-items">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+                    <div class="cart-total mt-4">
+                        <h4>Total: <span id="cart-total">0 RP</span></h4>
+                    </div>
+                    <button class="checkout-btn mt-3" onclick="window.location.href='checkout.html'">
+                        Proceed to Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About League</h3>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Champions</a></li>
+            <li><a href="#">Game Updates</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Community</h3>
+          <ul class="footer-links">
+            <li><a href="#">Community Guidelines</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Bug Report</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="#">Download Game</a></li>
+            <li><a href="#">System Requirements</a></li>
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://twitter.com/" aria-label="Twitter">
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/" aria-label="YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 League of Legends. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script>
+        function addToCart(image, name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ image, name, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Campeon añadido al carrito');
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script>
+      // Function to highlight the active section in the navbar
+      function highlightActiveSection() {
+        // Get the current URL path
+        const path = window.location.pathname;
+    
+        // Define a mapping of paths to navbar link IDs
+        const navLinks = {
+          '/index.html': 'nav-home',
+          '/page2.html': 'nav-champions',
+          '/page3.html': 'nav-items',
+          '/cart.html': 'nav-cart'
+        };
+    
+        // Get the ID of the active link based on the current path
+        const activeLinkId = navLinks[path];
+    
+        // Remove the active class from all nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+          link.classList.remove('active-section');
+        });
+    
+        // Add the active class to the current nav link
+        if (activeLinkId) {
+          document.getElementById(activeLinkId).classList.add('active-section');
+        }
+      }
+    
+      // Call the function when the page loads
+      document.addEventListener('DOMContentLoaded', highlightActiveSection);
+    </script>
+</body>
+</html>

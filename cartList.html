@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart List</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Cart List</h1>
+    <div id="cart-items" class="row"></div>
+    <div class="mt-4">
+      <p>Total Price: <span id="total-price">0</span> points</p>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Your Balance</span>
+        <input type="number" id="balance" class="form-control" value="0" />
+      </div>
+      <button class="btn btn-primary" onclick="checkBalance()">Check Balance</button>
+      <p id="balance-message" class="mt-3"></p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+  <script>
+    function loadCart() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let cartItemsDiv = document.getElementById('cart-items');
+      let totalPrice = 0;
+
+      cart.forEach(item => {
+        let itemDiv = document.createElement('div');
+        itemDiv.className = 'col-md-4 mb-4';
+        itemDiv.innerHTML = `
+          <div class="card">
+            <img src="${item.image}" class="card-img-top" alt="${item.name}">
+            <div class="card-body">
+              <h5 class="card-title">${item.name}</h5>
+              <p class="card-text">Price: ${item.price} points</p>
+            </div>
+          </div>
+        `;
+        cartItemsDiv.appendChild(itemDiv);
+        totalPrice += item.price;
+      });
+
+      document.getElementById('total-price').innerText = totalPrice;
+    }
+
+    function checkBalance() {
+      let balance = parseInt(document.getElementById('balance').value);
+      let totalPrice = parseInt(document.getElementById('total-price').innerText);
+      let message = balance >= totalPrice ? 'You have enough points to purchase these items.' : 'You do not have enough points to purchase these items.';
+      document.getElementById('balance-message').innerText = message;
+    }
+
+    window.onload = loadCart;
+  </script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>League of Legends</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="custom-header">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <img src="images/leaugeLogo-removebg-preview.png" height="76" width="150" class="breathing-icon" />
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-around">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"><h1>Inicio</h1></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="page2.html"><h1>Campeones</h1></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="page3.html"><h1>Items</h1></a>
+              </li>
+              <li>
+                <a class="nav-link" href="cart.html"><h1>Carrito</h1></a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 m-3">
+            <h1 class="text-center">Bienvenido a la pagina de League of Legends</h1>
+            <p class="text-center">En esta pagina podras encontrar informacion sobre los campeones y los items del juego</p>
+          </div>
+        </div>
+        <!-- Updated Carousel HTML -->
+        <div class="carousel-section">
+          <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <!-- Progress Indicators -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="2500">
+                <div class="carousel-overlay"></div>
+                <img src="images/zed.jpg" class="d-block w-100" alt="Zed" />
+                <div class="carousel-caption">
+                  <h2>Zed</h2>
+                  <p>El Maestro de las Sombras</p>
+                </div>
+              </div>
+
+              <div class="carousel-item" data-bs-interval="2500">
+                <div class="carousel-overlay"></div>
+                <img src="images/masteryi.jpg" class="d-block w-100" alt="Master Yi" />
+                <div class="carousel-caption">
+                  <h2>Master Yi</h2>
+                  <p>El Espadachín Wuju</p>
+                </div>
+              </div>
+
+              <div class="carousel-item" data-bs-interval="2500">
+                <div class="carousel-overlay"></div>
+                <img src="images/leona.jpg" class="d-block w-100" alt="Leona" />
+                <div class="carousel-caption">
+                  <h2>Leona</h2>
+                  <p>El Radiante Amanecer</p>
+                </div>
+              </div>
+
+              <div class="carousel-item" data-bs-interval="2500">
+                <div class="carousel-overlay"></div>
+                <img src="images/morgana.jpg" class="d-block w-100" alt="Morgana" />
+                <div class="carousel-caption">
+                  <h2>Morgana</h2>
+                  <p>El Ángel Caído</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <!-- Updated News Section HTML -->
+        <section class="news-section py-5">
+          <div class="container">
+            <h1 class="section-title text-center mb-5">
+              Noticias Destacadas
+              <span class="section-subtitle d-block">Las últimas actualizaciones de League of Legends</span>
+            </h1>
+
+            <div class="row g-4">
+              <!-- News Card 1 -->
+              <div class="col-lg-4 col-md-6">
+                <div class="card news-card h-100">
+                  <div class="card-img-wrapper">
+                    <div class="category-tag">Actualización</div>
+                    <img src="images/news1.avif" class="card-img-top" alt="News Image 1" />
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Actualización / dev: T1, jugabilidad y rangos</h3>
+                    <p class="card-text">Pabro, Meddler y otros devs nos cuentan sobre la T1, la jugabilidad para 2025, los rangos y mas.</p>
+                    <div class="card-footer">
+                      <a href="https://www.youtube.com/watch?v=T1SyLsHBMbQ" class="btn btn-primary read-more">
+                        Leer Más <i class="bi bi-arrow-right"></i>
+                      </a>
+                      <span class="date">Marzo 2024</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- News Card 2 -->
+              <div class="col-lg-4 col-md-6">
+                <div class="card news-card h-100">
+                  <div class="card-img-wrapper">
+                    <div class="category-tag">Temporada</div>
+                    <img src="images/news2.avif" class="card-img-top" alt="News Image 2" />
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">/dev Temporadas en 2025</h3>
+                    <p class="card-text">Esto es lo que necesitas saber sobre las temporadas en 2025</p>
+                    <div class="card-footer">
+                      <a href="https://www.leagueoflegends.com/es-mx/news/dev/dev-seasons-in-2025/" class="btn btn-primary read-more">
+                        Leer Más <i class="bi bi-arrow-right"></i>
+                      </a>
+                      <span class="date">Marzo 2024</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- News Card 3 -->
+              <div class="col-lg-4 col-md-6">
+                <div class="card news-card h-100">
+                  <div class="card-img-wrapper">
+                    <div class="category-tag">Clasificatoria</div>
+                    <img src="images/news3.avif" class="card-img-top" alt="News Image 3" />
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">/dev Actualización de la clasificatoria 2025</h3>
+                    <p class="card-text">Cambios para 2025, reinicios e inflación de la clasificatoria</p>
+                    <div class="card-footer">
+                      <a href="https://www.leagueoflegends.com/es-mx/news/dev/dev-ranked-update-season-one-2025/" class="btn btn-primary read-more">
+                        Leer Más <i class="bi bi-arrow-right"></i>
+                      </a>
+                      <span class="date">Marzo 2024</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About League</h3>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Champions</a></li>
+            <li><a href="#">Game Updates</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Community</h3>
+          <ul class="footer-links">
+            <li><a href="#">Community Guidelines</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Bug Report</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul class="footer-links">
+            <li><a href="#">Download Game</a></li>
+            <li><a href="#">System Requirements</a></li>
+            <li><a href="#">Merchandise</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="https://www.facebook.com/" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://twitter.com/" aria-label="Twitter">
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/" aria-label="YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 League of Legends. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script>
+      // Function to highlight the active section in the navbar
+      function highlightActiveSection() {
+        // Get the current URL path
+        const path = window.location.pathname;
+    
+        // Define a mapping of paths to navbar link IDs
+        const navLinks = {
+          '/index.html': 'nav-home',
+          '/page2.html': 'nav-champions',
+          '/page3.html': 'nav-items',
+          '/cart.html': 'nav-cart'
+        };
+    
+        // Get the ID of the active link based on the current path
+        const activeLinkId = navLinks[path];
+    
+        // Remove the active class from all nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+          link.classList.remove('active-section');
+        });
+    
+        // Add the active class to the current nav link
+        if (activeLinkId) {
+          document.getElementById(activeLinkId).classList.add('active-section');
+        }
+      }
+    
+      // Call the function when the page loads
+      document.addEventListener('DOMContentLoaded', highlightActiveSection);
+    </script>
+  </body>
+</html>
